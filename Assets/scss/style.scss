@@ -2,11 +2,11 @@
 // Colors
 $color_background: #f8f8f8;
 $color_blue_dark: #272a32;
-$color_box_grey: #f7f7f7;
 $color_grey_dark: #3e3e3e;
 $color_grey_light: #d3d3d3;
 $color_primary: #ec5242;
 $color_secondary: #272a31;
+$color_partner: #414246;
 $color_text: #555;
 $color_white: #fff;
 
@@ -41,6 +41,25 @@ a {
 
 body {
   background-color: $color_background;
+}
+
+footer {
+  font-size: 0.8rem;
+  padding: $padding*2 0;
+
+  .footer {
+    &-logo {
+      padding: 0 5vw 0 0;
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+    &-info {
+      width: 70%;
+    }    
+  }
 }
 
 h1 {
@@ -84,6 +103,7 @@ html {
 nav {
   background-color: rgba($color_blue_dark, 0.85);
   height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
   width: 50%;
@@ -112,24 +132,20 @@ nav {
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 1.5em;
   margin-bottom: 10px;
 }
 
 section {
-  min-height: 100vh;
-  padding: 50px 0;
+  padding: 80px 0;
   width: 100%;
 }
 
 .box {
+  background-color: $color_background;
+  border: 2px solid $color_white;
   line-height: 1.75rem;
   padding: $padding * 2;
-}
-
-.box-grey {
-  background-color: $color_box_grey;
-  border: 2px solid $color_white;
 }
 
 .cc-campaign {
@@ -213,10 +229,12 @@ section {
   margin: 2px;
   padding: $padding * 1.5;
   width: 100%;
+  transition: $transition * 2;
 
   &:hover {
     border: 1px solid $color_white;
     cursor: pointer;
+    transition: $transition;
   }
 
   h4 {
@@ -267,8 +285,8 @@ section {
   }
 
   p {
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2em;
     margin-bottom: 0;
   }
 
@@ -302,7 +320,8 @@ section {
   align-items: center;
   background: url(../images/bg_main.png) no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  min-height: 100vh;
+  padding: 100px 0 0 0;
   display: flex;
 
   img {
@@ -316,7 +335,7 @@ section {
     font-weight: 600;
   }
 
-  .box-grey {
+  .box {
     margin-bottom: 20px;
     width: 100%;
   }
@@ -329,15 +348,35 @@ section {
   }
 }
 
-#program {
-  background: $color_blue_dark url(../images/bg_pattern.png);
-  min-height: auto;
-  padding-bottom: 80px;
-  text-align: center;
+#partner {
+  background-color: $color_partner;
+
+  #list-partner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      margin: 10px 20px;
+      width: 30%;
+    }
+
+    img {
+      opacity: 0.25;
+      transition: $transition * 2;
+      width: 100%;
+
+      &:hover {
+        opacity: 1;
+        transition: $transition * 2;
+      }
+    }
+  }
 }
 
-#speakers {
-  min-height: auto;
+#program {
+  background: $color_blue_dark url(../images/bg_pattern.png);
+  text-align: center;
 }
 
 /* a hover section */
@@ -364,6 +403,20 @@ nav a:hover {
 */
 
 @media screen and (min-width: $breakpoint-tablet) {
+  footer {
+    padding: $padding*6 0;
+
+    .footer {
+      &-logo {
+        padding: 0 3vw 0 0;
+        width: 25%;
+      }
+      &-info {
+        width: 75%;
+      }    
+    }
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -482,6 +535,14 @@ nav a:hover {
 
   .speaker-box {
     width: 50%;
+
+    h4 {
+      font-size: 1.1rem;
+    }
+  
+    p {
+      font-size: 0.8rem;
+    }    
   }
 
   .tool-bar a:hover {
@@ -497,7 +558,7 @@ nav a:hover {
       font-size: 1.25rem;
     }
 
-    .box-grey {
+    .box {
       margin-bottom: 20px;
       width: 60%;
     }
@@ -515,4 +576,20 @@ nav a:hover {
       flex-wrap: wrap;
     }    
   }
+
+  #partner {
+    #list-partner {
+      flex-wrap: nowrap;
+           
+      a {
+        width: 20%;
+        text-align: center;
+      }
+
+      img {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }  
 }

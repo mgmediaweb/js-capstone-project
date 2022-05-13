@@ -23,6 +23,24 @@ body {
   background-color: #f8f8f8;
 }
 
+footer {
+  font-size: 0.8rem;
+  padding: 20px 0;
+}
+
+footer .footer-logo {
+  padding: 0 5vw 0 0;
+  width: 30%;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer .footer-info {
+  width: 70%;
+}
+
 h1 {
   color: #ec5242;
   font-family: 'COCOGOOSE Regular', Helvetica, sans-serif;
@@ -65,6 +83,7 @@ html {
 nav {
   background-color: rgba(39, 42, 50, 0.85);
   height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
   width: 50%;
@@ -93,24 +112,20 @@ nav .active:hover {
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 1.5em;
   margin-bottom: 10px;
 }
 
 section {
-  min-height: 100vh;
-  padding: 50px 0;
+  padding: 80px 0;
   width: 100%;
 }
 
 .box {
+  background-color: #f8f8f8;
+  border: 2px solid #fff;
   line-height: 1.75rem;
   padding: 20px;
-}
-
-.box-grey {
-  background-color: #f7f7f7;
-  border: 2px solid #fff;
 }
 
 .cc-campaign {
@@ -214,11 +229,15 @@ section {
   margin: 2px;
   padding: 15px;
   width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .program-box:hover {
   border: 1px solid #fff;
   cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .program-box h4 {
@@ -276,8 +295,8 @@ section {
 }
 
 .speaker-box p {
-  font-size: 0.8rem;
-  line-height: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.2em;
   margin-bottom: 0;
 }
 
@@ -312,7 +331,8 @@ section {
           align-items: center;
   background: url(../images/bg_main.png) no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  min-height: 100vh;
+  padding: 100px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +349,7 @@ section {
   font-weight: 600;
 }
 
-#cover .box-grey {
+#cover .box {
   margin-bottom: 20px;
   width: 100%;
 }
@@ -339,15 +359,42 @@ section {
   margin-bottom: 30px;
 }
 
-#program {
-  background: #272a32 url(../images/bg_pattern.png);
-  min-height: auto;
-  padding-bottom: 80px;
-  text-align: center;
+#partner {
+  background-color: #414246;
 }
 
-#speakers {
-  min-height: auto;
+#partner #list-partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#partner #list-partner a {
+  margin: 10px 20px;
+  width: 30%;
+}
+
+#partner #list-partner img {
+  opacity: 0.25;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+#partner #list-partner img:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#program {
+  background: #272a32 url(../images/bg_pattern.png);
+  text-align: center;
 }
 
 /* a hover section */
@@ -373,6 +420,16 @@ nav a:hover {
 ###################################################################################################
 */
 @media screen and (min-width: 768px) {
+  footer {
+    padding: 60px 0;
+  }
+  footer .footer-logo {
+    padding: 0 3vw 0 0;
+    width: 25%;
+  }
+  footer .footer-info {
+    width: 75%;
+  }
   h2 {
     font-size: 2rem;
   }
@@ -475,6 +532,12 @@ nav a:hover {
   .speaker-box {
     width: 50%;
   }
+  .speaker-box h4 {
+    font-size: 1.1rem;
+  }
+  .speaker-box p {
+    font-size: 0.8rem;
+  }
   .tool-bar a:hover {
     color: #d3d3d3;
   }
@@ -484,7 +547,7 @@ nav a:hover {
   #cover p {
     font-size: 1.25rem;
   }
-  #cover .box-grey {
+  #cover .box {
     margin-bottom: 20px;
     width: 60%;
   }
@@ -503,5 +566,17 @@ nav a:hover {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  #partner #list-partner {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  #partner #list-partner a {
+    width: 20%;
+    text-align: center;
+  }
+  #partner #list-partner img {
+    margin: 0;
+    padding: 0;
   }
 }
