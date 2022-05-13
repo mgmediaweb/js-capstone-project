@@ -60,4 +60,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
+Creative Commons
+
 This project is [MIT](./MIT.md) licensed.
