@@ -8,29 +8,42 @@ fetch('./Assets/json/program.json')
   .then((response) => response.json())
   .then((data) => {
     data.forEach((program) => {
-      listPrograms += `<img src="./Assets/images/${program.image}" alt="" /><p>${program.title}</p>`;
+      listPrograms += `<div class="program-box">
+          <div class="program-info">
+            <img src="./Assets/images/${program.image}" alt="${program.title}" />
+            <h4>${program.title}</h4>
+          </div>
+          <p>${program.description}</p>
+        </div>`;
     });
-    document.getElementById('speakers').innerHTML += listPrograms;
+    document.getElementById('list-program').innerHTML = listPrograms;
   });
 
 fetch('./Assets/json/speakers.json')
   .then((response) => response.json())
   .then((data) => {
     data.forEach((speaker) => {
-      listSpeakers += `<img src="./Assets/images/${speaker.image}" alt="" /><p>${speaker.name}</p>`;
+      listSpeakers += `<div class="speaker-box">
+        <div class="speaker-image"><img src="./Assets/images/${speaker.image}" title="${speaker.name}" alt="${speaker.name}" /></div>
+        <div class="speaker-info">
+          <div class="speaker-head">
+            <h4>${speaker.name}</h4>`;
+            
+      if(speaker.career) listSpeakers += `<p class="career">${speaker.career}</p>`;
+
+      listSpeakers += `</div><p>${speaker.description}</p></div></div>`;
     });
-    document.getElementById('speakers').innerHTML += listSpeakers;
+    document.getElementById('list-speakers').innerHTML = listSpeakers;
   });
 
+mobileMenuButtonOpen.addEventListener('click', () => {
+  mobileMenuButtonOpen.style.opacity = 0;
+  mobileMenu.classList.remove('nav-initial');
+  mobileMenu.classList.add('nav-active');
+});
 
-  mobileMenuButtonOpen.addEventListener('click', () => {
-    mobileMenuButtonOpen.style.opacity = 0;
-    mobileMenu.classList.remove('nav_initial');
-    mobileMenu.classList.add('nav_active');
-  });
-
-  mobileMenuButtonClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('nav_active');
-    mobileMenu.classList.add('nav_initial');
-    mobileMenuButtonOpen.style.opacity = 1;    
-  });
+mobileMenuButtonClose.addEventListener('click', () => {
+  mobileMenu.classList.remove('nav-active');
+  mobileMenu.classList.add('nav-initial');
+  mobileMenuButtonOpen.style.opacity = 1;
+});
