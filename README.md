@@ -2,7 +2,7 @@
 
 # Project Name
 
-> My Personal Portfolio.
+> Capstone Project - Creative Commons Summit 2015.
 
 ## Built With
 
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[mgmediaweb.github.io/portfolio](https://mgmediaweb.github.io/js-capstone-project)
+[mgmediaweb.github.io/js-capstone-project](https://mgmediaweb.github.io/js-capstone-project)
 
 ## Getting Started
 
