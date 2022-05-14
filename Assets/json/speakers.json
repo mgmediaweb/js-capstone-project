@@ -1,38 +1,38 @@
 [
     {
-        "name": "Yochai Benkler",
-        "career": "Berkman Professor of Entrepreneurial Legal Studies At Harvard Law School",
-        "description": "Benkler studies commons-based peer production, and published his seminar book The Wealth of Networks in 2006.",
+        "name": "Nino Schurter",
+        "career": "The best mountain biker of all time",
+        "description": "historical record of 33 world cup victories, 7 times world champion and double olympic medalist.",
         "image": "speaker_01.png"
     },
     {
-        "name": "Kilnam Chon",
-        "career": null,
-        "description": "Kilnam Chon helped bring the internet to Asia and is an outspoken advocate for the open web and digital commons in 2012, he was inducted into the inaugural class of the Internet Society's (ISOC) Internet Hall of Fame.",
+        "name": "Mike Sinyard",
+        "career": "Simply the creator of the mountain bike",
+        "description": "Founder of the company Specialized, one of the most prestigious brands in the market.",
         "image": "speaker_02.png"
     },
     {
-        "name": "SohYeong Noh",
-        "career": "Director of Art Centre Nabi and a board member of CC Korea",
-        "description": "As the main venue of new media art production in Korea, Nabi promote cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.",
+        "name": "Kevin Vermaak",
+        "career": "Creator of one of the most epic competitions in the world",
+        "description": "From South Africa, this mountain bike fanatic founded the ABSA Cape Epic stage competition.",
         "image": "speaker_03.png"
     },
     {
-        "name": "Julia Leda",
-        "career": "Presidente of Young Pirates of Europe",
-        "description": "Europen ingetration, political democracy and participation of youth online as her major condern, Reda's report outlining potential changes to EU copyright law was approved by the Parlament in July.",
+        "name": "Yanick The Mechanic",
+        "career": "One of the most outstanding mechanics of the circuit",
+        "description": "Mechanic of the best riders in the world, belonging to the Scott-SRAM team",
         "image": "speaker_04.png"
     },
     {
-        "name": "Lila Tretikov",
-        "career": "Executive Director of the Wikimedia Foundation",
-        "description": "Lila Tretikov is the Executive Director of the Wikimedia Foundation, the nonprofit organization that operates Wikipedia, Wikipedia is freely available in 290 languages and used by nearly half a billlion people around the world every month.",
+        "name": "Rebecca McConnell",
+        "career": "Leader of the 2022 ranking of the UCI MTB",
+        "description": "The Australian from the Mondraker Primaflor team has achieved 3 consecutive victories this year.",
         "image": "speaker_05.png"
     },
     {
-        "name": "Ryan Merkley",
-        "career": "CEO of Creative Commons, ex COO of the Mozila Foundation",
-        "description": "Ryan had been leading open-source projects at the Mozilla Foundation such as the open source movement.",
+        "name": "Tom Hnida",
+        "career": "Road Bike Designer Experimenting with Colouring Techniques",
+        "description": "For a cyclist, getting a bike from the Czech company Festka is a dream similar to buying a Porsche or Lamborghini as a keen motorist.",
         "image": "speaker_06.png"
     }                                        
 ]

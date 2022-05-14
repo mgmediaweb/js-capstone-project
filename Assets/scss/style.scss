@@ -51,31 +51,41 @@ footer {
     &-logo {
       padding: 0 5vw 0 0;
       width: 30%;
-
-      img {
-        width: 100%;
-      }
     }
+
     &-info {
+      text-align: right;
       width: 70%;
-    }    
+    }
   }
 }
 
 h1 {
   color: $color_primary;
   font-family: 'COCOGOOSE Regular', Helvetica, sans-serif;
-  font-size: 3rem;
-  margin-bottom: 0.5em;
+  font-size: 4rem;
+  line-height: 1em;
+  margin-bottom: 1rem;
 }
 
 h2 {
+  background: url(../images/title_decoration.png) no-repeat center bottom;
+  background-size: 30px 2px;
+  color: $color_primary;
+  font-family: 'COCOGOOSE Regular', Helvetica, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+  margin-bottom: 1.5em;
+  padding-bottom: $padding * 1.75;
+}
+
+h3 {
   font-family: 'COCOGOOSE Regular', Helvetica, sans-serif;
   font-size: 1.33rem;
   margin-bottom: 0.5em;
 }
 
-h3 {
+h4 {
   background: url(../images/title_decoration.png) no-repeat center bottom;
   color: $color_white;
   font-size: 1.33rem;
@@ -144,8 +154,24 @@ section {
 .box {
   background-color: $color_background;
   border: 2px solid $color_white;
-  line-height: 1.75rem;
+  line-height: 1.5em;
   padding: $padding * 2;
+}
+
+.box-white {
+  background-color: $color_white;
+  border-color: $color_grey_light;
+}
+
+.breadcrumb {
+  margin-bottom: $padding*3;
+  text-align: right;
+
+  .separator {
+    color: $color_primary;
+    font-size: 1.1rem;
+    margin: 0 $padding*0.5;
+  }
 }
 
 .cc-campaign {
@@ -209,6 +235,11 @@ section {
   width: 70px;
 }
 
+.main-logo {
+  height: 50px;
+  width: auto;
+}
+
 .nav {
   &-initial {
     left: -50%;
@@ -238,13 +269,12 @@ section {
   }
 
   h4 {
+    background: none;
     color: $color_primary;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 0 0 0 7px;
+    margin-bottom: 10px;
     text-align: left;
-  }
-
-  img {
-    transform: scale(0.75);
   }
 
   p {
@@ -275,12 +305,17 @@ section {
 }
 
 .speaker-box {
-  display: flex;  
+  display: flex;
   margin-bottom: $padding * 2;
   width: 100%;
 
   h4 {
+    color: $color_secondary;
+    background: none;
     font-size: 1.1rem;
+    margin: 0 0 $padding * 2 0;
+    padding: 0;
+    text-align: left;
     margin-bottom: $padding * 0.5;
   }
 
@@ -292,16 +327,11 @@ section {
 
   .career {
     color: $color_primary;
-    font-style: italic;    
+    font-style: italic;
   }
 
   .speaker-image {
     width: 25%;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
   }
 
   .speaker-info {
@@ -310,24 +340,39 @@ section {
 
     .speaker-head {
       background: url(../images/speaker_decoration.png) no-repeat bottom left;
-      margin-bottom: $padding * 0.5;
-      padding-bottom: $padding * 0.5;
+      margin-bottom: $padding;
+      padding-bottom: $padding;
     }
   }
 }
 
+#about {
+  background: url(../images/bg_about.png) no-repeat center center;
+
+  /* padding: 130px 0 80px 0; */
+  padding: 90px 0;
+  text-align: center;
+
+  .box {
+    margin-bottom: 20px;
+  }
+}
+
+#content {
+  background-color: $color_white;
+  padding: $padding*8 0;
+}
+
 #cover {
   align-items: center;
-  background: url(../images/bg_main.png) no-repeat;
+  background: url(../images/bg_main.png) no-repeat center center;
   background-size: cover;
   min-height: 100vh;
-  padding: 100px 0 0 0;
+  padding: 90px 0;
   display: flex;
 
-  img {
-    height: auto;
-    margin-bottom: 15px;
-    width: 100%;
+  h3 {
+    font-size: 1.2rem;
   }
 
   p {
@@ -337,7 +382,6 @@ section {
 
   .box {
     margin-bottom: 20px;
-    width: 100%;
   }
 }
 
@@ -352,25 +396,10 @@ section {
   background-color: $color_partner;
 
   #list-partner {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    a {
-      margin: 10px 20px;
-      width: 30%;
-    }
-
-    img {
-      opacity: 0.25;
-      transition: $transition * 2;
-      width: 100%;
-
-      &:hover {
-        opacity: 1;
-        transition: $transition * 2;
-      }
-    }
   }
 }
 
@@ -392,8 +421,48 @@ nav a:hover {
   color: $color_white;
 }
 
+/* a section */
+
+#list-partner a {
+  margin: 5px 20px;
+  width: 30%;
+}
+
 #program a {
   color: $color_white;
+}
+
+/* img section */
+
+.footer-logo img {
+  width: 100%;
+}
+
+.program-info img {
+  height: auto;
+  width: 30px;
+}
+
+.speaker-image img {
+  height: auto;
+  width: 100%;
+}
+
+#cover img {
+  height: auto;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+#list-partner img {
+  opacity: 0.25;
+  transition: $transition * 2;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
+    transition: $transition * 2;
+  }
 }
 
 /*
@@ -411,9 +480,10 @@ nav a:hover {
         padding: 0 3vw 0 0;
         width: 25%;
       }
+
       &-info {
         width: 75%;
-      }    
+      }
     }
   }
 
@@ -512,14 +582,14 @@ nav a:hover {
     width: 20%;
 
     h4 {
-      font-size: 1.25rem;
+      font-size: 1rem;
       margin-bottom: $padding;
       text-align: center;
     }
 
     img {
       margin-bottom: $padding;
-      transform: scale(1);
+      width: 60px;
     }
 
     p {
@@ -539,17 +609,28 @@ nav a:hover {
     h4 {
       font-size: 1.1rem;
     }
-  
+
     p {
       font-size: 0.8rem;
-    }    
+    }
   }
 
   .tool-bar a:hover {
     color: $color_grey_light;
   }
 
+  #about {
+    padding: 120px 0 90px 0;
+
+    .box {
+      margin: 0 auto;
+      width: 60%;
+    }
+  }
+
   #cover {
+    padding: 120px 0 0 0;
+
     img {
       width: 75%;
     }
@@ -559,7 +640,6 @@ nav a:hover {
     }
 
     .box {
-      margin-bottom: 20px;
       width: 60%;
     }
   }
@@ -574,13 +654,14 @@ nav a:hover {
     &-speakers {
       display: flex;
       flex-wrap: wrap;
-    }    
+    }
   }
 
   #partner {
     #list-partner {
+      align-items: center;
       flex-wrap: nowrap;
-           
+
       a {
         width: 20%;
         text-align: center;
@@ -591,5 +672,5 @@ nav a:hover {
         padding: 0;
       }
     }
-  }  
+  }
 }

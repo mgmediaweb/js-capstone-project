@@ -1,27 +1,27 @@
 [
     {
-        "title": "Lecture",
-        "description": "Listen to the speakers from various countries about the messeges of sharing and opening.",
-        "image": "program_icon_01.png"
+        "title": "Rides",
+        "description": "Sign up for one of the scheduled rides with leading riders in the circuit.",
+        "image": "program_icon_01.svg"
     },
     {
-        "title": "CC Exhibition",
-        "description": "Appreciate various creations applying CC license of artists, organized from Art Center Nabi.",
-        "image": "program_icon_02.png"
+        "title": "Conferences",
+        "description": "Outstanding characters from the world of two wheels meet to explain their exploits.",
+        "image": "program_icon_02.svg"
     },
     {
-        "title": "Forum",
-        "description": "Have the time to share your thoughts and opinions with experts for each topic.",
-        "image": "program_icon_03.png"
+        "title": "Autographs",
+        "description": "A napkin, a t-shirt or your arm, any place is good to carry a great signature.",
+        "image": "program_icon_03.svg"
     },
     {
-        "title": "Workshop",
-        "description": "Try creating your own work using open source license rather than just watching at it.",
-        "image": "program_icon_04.png"
+        "title": "Contests",
+        "description": "Be one of the lucky ones to receive some of the spectacular gifts we have for you.",
+        "image": "program_icon_04.svg"
     },
     {
-        "title": "CC Ignite",
+        "title": "Tech Talk",
         "description": "Get opportunities to network with CC affiliates around the world, also after the summit.",
-        "image": "program_icon_05.png"
+        "image": "program_icon_05.svg"
     }
 ]

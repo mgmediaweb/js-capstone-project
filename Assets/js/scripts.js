@@ -4,37 +4,44 @@ const mobileMenuButtonOpen = document.querySelector('.mobile-menu-open');
 const mobileMenuButtonClose = document.querySelector('.mobile-menu-close');
 const mobileMenu = document.querySelector('nav');
 
-fetch('./Assets/json/program.json')
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((program) => {
-      listPrograms += `<div class="program-box">
-          <div class="program-info">
-            <img src="./Assets/images/${program.image}" alt="${program.title}" />
-            <h4>${program.title}</h4>
+const path = window.location.pathname;
+const page = path.split('/').pop();
+
+if ((page === '') || (page === 'index.html')) {
+  fetch('./Assets/json/program.json')
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((program) => {
+        listPrograms += `<div class="program-box">
+            <div class="program-info">
+              <img src="./Assets/images/${program.image}" alt="${program.title}" />
+              <h4>${program.title}</h4>
+            </div>
+            <p>${program.description}</p>
+          </div>`;
+      });
+      document.getElementById('list-program').innerHTML = listPrograms;
+    });
+
+  fetch('./Assets/json/speakers.json')
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((speaker) => {
+        listSpeakers += `<div class="speaker-box">
+          <div class="speaker-image">
+            <img src="./Assets/images/${speaker.image}" title="${speaker.name}" alt="${speaker.name}" />
           </div>
-          <p>${program.description}</p>
-        </div>`;
-    });
-    document.getElementById('list-program').innerHTML = listPrograms;
-  });
+          <div class="speaker-info">
+            <div class="speaker-head">
+              <h4>${speaker.name}</h4>`;
 
-fetch('./Assets/json/speakers.json')
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((speaker) => {
-      listSpeakers += `<div class="speaker-box">
-        <div class="speaker-image"><img src="./Assets/images/${speaker.image}" title="${speaker.name}" alt="${speaker.name}" /></div>
-        <div class="speaker-info">
-          <div class="speaker-head">
-            <h4>${speaker.name}</h4>`;
-            
-      if(speaker.career) listSpeakers += `<p class="career">${speaker.career}</p>`;
+        if (speaker.career) listSpeakers += `<p class="career">${speaker.career}</p>`;
 
-      listSpeakers += `</div><p>${speaker.description}</p></div></div>`;
+        listSpeakers += `</div><p>${speaker.description}</p></div></div>`;
+      });
+      document.getElementById('list-speakers').innerHTML = listSpeakers;
     });
-    document.getElementById('list-speakers').innerHTML = listSpeakers;
-  });
+}
 
 mobileMenuButtonOpen.addEventListener('click', () => {
   mobileMenuButtonOpen.style.opacity = 0;
