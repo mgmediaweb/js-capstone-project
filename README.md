@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Capstone Project - Creative Commons Summit 2015.
+> Capstone Project - Interbike 2022.
 
 ## Built With
 
@@ -62,4 +62,4 @@ Give a ⭐️ if you like this project!
 
 Creative Commons
 
-This project is [MIT](./MIT.md) licensed.
+This project is only for student purpose, the design is based in the template from [Cindy Shin](https://www.behance.net/adagio07).
