@@ -1,4 +1,8 @@
 let unique = true;
+let countVal = null;
+let counter = 0;
+const delay = 50;
+const wait = 5;
 let listPrograms = '';
 let listSpeakers = '';
 const markets = [
@@ -90,94 +94,68 @@ mobileMenuButtonClose.addEventListener('click', () => {
   mobileMenuButtonOpen.style.opacity = 1;
 });
 
-let countVal = null;
-let counter = 0;
-const delay = 50;
-const wait = 5;
-
-const doneCount = [
-  false, false, false, false,
-  false, false, false, false,
-];
-const start = [
-  wait * 0, wait * 1, wait * 2, wait * 3,
-  wait * 4, wait * 5, wait * 6, wait * 7,
-];
-
 const showMsj = () => {
   counter += 1;
 
-  if (counter > start[0]) {
-    if ((counter - start[0]) <= markets[0].quantity) {
-      document.getElementById(`qty-${markets[0].market}`).innerHTML = (counter - start[0]);
-    } else {
-      doneCount[0] = true;
-    }
+  if (( (counter - (wait * 0)) > 0 ) && (counter - (wait * 0)) <= markets[0].quantity) {
+    document.getElementById(`qty-${markets[0].market}`).innerHTML = counter - (wait * 0);
   }
 
-  if (counter > start[1]) {
-    if ((counter - start[1]) <= markets[1].quantity) {
-      document.getElementById(`qty-${markets[1].market}`).innerHTML = (counter - start[1]);
-    } else {
-      doneCount[1] = true;
-    }
+  if (( (counter - (wait * 1)) > 0 ) && (counter - (wait * 1)) <= markets[1].quantity) {
+    document.getElementById(`qty-${markets[1].market}`).innerHTML = counter - (wait * 1);
   }
 
-  if (counter > start[2]) {
-    if ((counter - start[2]) <= markets[2].quantity) {
-      document.getElementById(`qty-${markets[2].market}`).innerHTML = (counter - start[2]);
-    } else {
-      doneCount[2] = true;
-    }
+  if (( (counter - (wait * 2)) > 0 ) && (counter - (wait * 2)) <= markets[2].quantity) {
+    document.getElementById(`qty-${markets[2].market}`).innerHTML = counter - (wait * 2);
+  }
+  
+  if (( (counter - (wait * 3)) > 0 ) && (counter - (wait * 3)) <= markets[3].quantity) {
+    document.getElementById(`qty-${markets[3].market}`).innerHTML = counter - (wait * 3);
+  }
+  
+  if (( (counter - (wait * 4)) > 0 ) && (counter - (wait * 4)) <= markets[4].quantity) {
+    document.getElementById(`qty-${markets[4].market}`).innerHTML = counter - (wait * 4);
   }
 
-  if (counter > start[3]) {
-    if ((counter - start[3]) <= markets[3].quantity) {
-      document.getElementById(`qty-${markets[3].market}`).innerHTML = (counter - start[3]);
-    } else {
-      doneCount[3] = true;
-    }
+  if (( (counter - (wait * 5)) > 0 ) && (counter - (wait * 5)) <= markets[5].quantity) {
+    document.getElementById(`qty-${markets[5].market}`).innerHTML = counter - (wait * 5);
   }
 
-  if (counter > start[4]) {
-    if ((counter - start[4]) <= markets[4].quantity) {
-      document.getElementById(`qty-${markets[4].market}`).innerHTML = (counter - start[4]);
-    } else {
-      doneCount[4] = true;
-    }
+  if (( (counter - (wait * 6)) > 0 ) && (counter - (wait * 6)) <= markets[6].quantity) {
+    document.getElementById(`qty-${markets[6].market}`).innerHTML = counter - (wait * 6);
   }
 
-  if (counter > start[5]) {
-    if ((counter - start[5]) <= markets[5].quantity) {
-      document.getElementById(`qty-${markets[5].market}`).innerHTML = (counter - start[5]);
-    } else {
-      doneCount[5] = true;
-    }
+  if (( (counter - (wait * 7)) > 0 ) && (counter - (wait * 7)) <= markets[7].quantity) {
+    document.getElementById(`qty-${markets[7].market}`).innerHTML = counter - (wait * 7);
   }
+  
+  if (
+    (document.getElementById(`qty-${markets[0].market}`).innerHTML == markets[0].quantity)
+    &&
+    (document.getElementById(`qty-${markets[1].market}`).innerHTML == markets[1].quantity)
+    &&
+    (document.getElementById(`qty-${markets[2].market}`).innerHTML == markets[2].quantity)
+    &&
+    (document.getElementById(`qty-${markets[3].market}`).innerHTML == markets[3].quantity)
+    &&
+    (document.getElementById(`qty-${markets[4].market}`).innerHTML == markets[4].quantity)
+    &&
+    (document.getElementById(`qty-${markets[5].market}`).innerHTML == markets[5].quantity)
+    &&
+    (document.getElementById(`qty-${markets[6].market}`).innerHTML == markets[6].quantity)
+    &&    
+    (document.getElementById(`qty-${markets[7].market}`).innerHTML == markets[7].quantity)
+  ) clearInterval(countVal);
 
-  if (counter > start[6]) {
-    if ((counter - start[6]) <= markets[6].quantity) {
-      document.getElementById(`qty-${markets[6].market}`).innerHTML = (counter - start[6]);
-    } else {
-      doneCount[6] = true;
-    }
-  }
-
-  if (counter > start[7]) {
-    if ((counter - start[7]) <= markets[7].quantity) {
-      document.getElementById(`qty-${markets[7].market}`).innerHTML = (counter - start[7]);
-    } else {
-      doneCount[7] = true;
-    }
-  }
-
-  if (!doneCount.includes(false)) clearInterval(countVal);
 };
 
 window.addEventListener('scroll', () => {
   const { scrollY } = this;
+  const scrollbreak = 1600;
 
-  if ((scrollY > 500) && (unique)) {
+  if (window.screen.width > 768) scrollbreak = 500;
+
+  if ((scrollY > scrollbreak) && (unique)) {
     unique = false;
     countVal = window.setInterval(showMsj, delay);
   }
