@@ -398,7 +398,7 @@ section {
 
 #cover {
   align-items: center;
-  background: url(../images/bg_main.png) no-repeat center center;
+  background: url(../images/bg_main_mobile.jpg) no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   padding: 90px 0;
@@ -673,6 +673,7 @@ nav a:hover {
   }
 
   #cover {
+    background: url(../images/bg_main_desktop.jpg) no-repeat center center;
     padding: 120px 0 0 0;
 
     img {
