@@ -134,14 +134,16 @@ const showMsj = () => {
   }
 };
 
-window.addEventListener('scroll', () => {
-  const { scrollY } = this;
-  let scrollbreak = 1600;
+if (page === 'about.html') {
+  window.addEventListener('scroll', () => {
+    const { scrollY } = this;
+    let scrollbreak = 1600;
 
-  if (window.screen.width > 768) scrollbreak = 500;
+    if (window.screen.width > 768) scrollbreak = 500;
 
-  if ((scrollY > scrollbreak) && (unique)) {
-    unique = false;
-    countVal = window.setInterval(showMsj, delay);
-  }
-});
+    if ((scrollY > scrollbreak) && (unique)) {
+      unique = false;
+      countVal = window.setInterval(showMsj, delay);
+    }
+  });
+}
