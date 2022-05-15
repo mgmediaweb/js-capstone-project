@@ -125,33 +125,18 @@ const showMsj = () => {
     document.getElementById(`qty-${markets[6].market}`).innerHTML = counter - (wait * 6);
   }
 
-  if (( (counter - (wait * 7)) > 0 ) && (counter - (wait * 7)) <= markets[7].quantity) {
-    document.getElementById(`qty-${markets[7].market}`).innerHTML = counter - (wait * 7);
+  if ((counter - (wait * 7)) > 0) {
+    if((counter - (wait * 7)) <= markets[7].quantity) {
+      document.getElementById(`qty-${markets[7].market}`).innerHTML = counter - (wait * 7);
+    } else {
+      clearInterval(countVal);
+    }
   }
-  
-  if (
-    (document.getElementById(`qty-${markets[0].market}`).innerHTML == markets[0].quantity)
-    &&
-    (document.getElementById(`qty-${markets[1].market}`).innerHTML == markets[1].quantity)
-    &&
-    (document.getElementById(`qty-${markets[2].market}`).innerHTML == markets[2].quantity)
-    &&
-    (document.getElementById(`qty-${markets[3].market}`).innerHTML == markets[3].quantity)
-    &&
-    (document.getElementById(`qty-${markets[4].market}`).innerHTML == markets[4].quantity)
-    &&
-    (document.getElementById(`qty-${markets[5].market}`).innerHTML == markets[5].quantity)
-    &&
-    (document.getElementById(`qty-${markets[6].market}`).innerHTML == markets[6].quantity)
-    &&    
-    (document.getElementById(`qty-${markets[7].market}`).innerHTML == markets[7].quantity)
-  ) clearInterval(countVal);
-
 };
 
 window.addEventListener('scroll', () => {
   const { scrollY } = this;
-  const scrollbreak = 1600;
+  let scrollbreak = 1600;
 
   if (window.screen.width > 768) scrollbreak = 500;
 
