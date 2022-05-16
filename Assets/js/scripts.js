@@ -97,36 +97,36 @@ mobileMenuButtonClose.addEventListener('click', () => {
 const showMsj = () => {
   counter += 1;
 
-  if (( (counter - (wait * 0)) > 0 ) && (counter - (wait * 0)) <= markets[0].quantity) {
+  if (((counter - (wait * 0)) > 0) && (counter - (wait * 0)) <= markets[0].quantity) {
     document.getElementById(`qty-${markets[0].market}`).innerHTML = counter - (wait * 0);
   }
 
-  if (( (counter - (wait * 1)) > 0 ) && (counter - (wait * 1)) <= markets[1].quantity) {
+  if (((counter - (wait * 1)) > 0) && (counter - (wait * 1)) <= markets[1].quantity) {
     document.getElementById(`qty-${markets[1].market}`).innerHTML = counter - (wait * 1);
   }
 
-  if (( (counter - (wait * 2)) > 0 ) && (counter - (wait * 2)) <= markets[2].quantity) {
+  if (((counter - (wait * 2)) > 0) && (counter - (wait * 2)) <= markets[2].quantity) {
     document.getElementById(`qty-${markets[2].market}`).innerHTML = counter - (wait * 2);
   }
-  
-  if (( (counter - (wait * 3)) > 0 ) && (counter - (wait * 3)) <= markets[3].quantity) {
+
+  if (((counter - (wait * 3)) > 0) && (counter - (wait * 3)) <= markets[3].quantity) {
     document.getElementById(`qty-${markets[3].market}`).innerHTML = counter - (wait * 3);
   }
-  
-  if (( (counter - (wait * 4)) > 0 ) && (counter - (wait * 4)) <= markets[4].quantity) {
+
+  if (((counter - (wait * 4)) > 0) && (counter - (wait * 4)) <= markets[4].quantity) {
     document.getElementById(`qty-${markets[4].market}`).innerHTML = counter - (wait * 4);
   }
 
-  if (( (counter - (wait * 5)) > 0 ) && (counter - (wait * 5)) <= markets[5].quantity) {
+  if (((counter - (wait * 5)) > 0) && (counter - (wait * 5)) <= markets[5].quantity) {
     document.getElementById(`qty-${markets[5].market}`).innerHTML = counter - (wait * 5);
   }
 
-  if (( (counter - (wait * 6)) > 0 ) && (counter - (wait * 6)) <= markets[6].quantity) {
+  if (((counter - (wait * 6)) > 0) && (counter - (wait * 6)) <= markets[6].quantity) {
     document.getElementById(`qty-${markets[6].market}`).innerHTML = counter - (wait * 6);
   }
 
   if ((counter - (wait * 7)) > 0) {
-    if((counter - (wait * 7)) <= markets[7].quantity) {
+    if ((counter - (wait * 7)) <= markets[7].quantity) {
       document.getElementById(`qty-${markets[7].market}`).innerHTML = counter - (wait * 7);
     } else {
       clearInterval(countVal);
