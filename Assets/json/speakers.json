@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Nino Schurter",
+        "career": "The best mountain biker of all time",
+        "description": "historical record of 33 world cup victories, 7 times world champion and double olympic medalist.",
+        "image": "speaker_01.png"
+    },
+    {
+        "name": "Mike Sinyard",
+        "career": "Simply the creator of the mountain bike",
+        "description": "Founder of the company Specialized, one of the most prestigious brands in the market.",
+        "image": "speaker_02.png"
+    },
+    {
+        "name": "Kevin Vermaak",
+        "career": "Creator of one of the most epic competitions in the world",
+        "description": "From South Africa, this mountain bike fanatic founded the ABSA Cape Epic stage competition.",
+        "image": "speaker_03.png"
+    },
+    {
+        "name": "Yanick The Mechanic",
+        "career": "One of the most outstanding mechanics of the circuit",
+        "description": "Mechanic of the best riders in the world, belonging to the Scott-SRAM team",
+        "image": "speaker_04.png"
+    },
+    {
+        "name": "Rebecca McConnell",
+        "career": "Leader of the 2022 ranking of the UCI MTB",
+        "description": "The Australian from the Mondraker Primaflor team has achieved 3 consecutive victories this year.",
+        "image": "speaker_05.png"
+    },
+    {
+        "name": "Tom Hnida",
+        "career": "Road Bike Designer Experimenting with Colouring Techniques",
+        "description": "For a cyclist, getting a bike from the Czech company Festka is a dream similar to buying a Porsche or Lamborghini as a keen motorist.",
+        "image": "speaker_06.png"
+    }                                        
+]

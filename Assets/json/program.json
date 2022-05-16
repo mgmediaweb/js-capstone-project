@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Rides",
+        "description": "Sign up for one of the scheduled rides with leading riders in the circuit.",
+        "image": "program_icon_01.svg"
+    },
+    {
+        "title": "Conferences",
+        "description": "Outstanding characters from the world of two wheels meet to explain their exploits.",
+        "image": "program_icon_02.svg"
+    },
+    {
+        "title": "Autographs",
+        "description": "A napkin, a t-shirt or your arm, any place is good to carry a great signature.",
+        "image": "program_icon_03.svg"
+    },
+    {
+        "title": "Contests",
+        "description": "Be one of the lucky ones to receive some of the spectacular gifts we have for you.",
+        "image": "program_icon_04.svg"
+    },
+    {
+        "title": "Tech Talk",
+        "description": "Get opportunities to network with CC affiliates around the world, also after the summit.",
+        "image": "program_icon_05.svg"
+    }
+]
