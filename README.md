@@ -3,6 +3,7 @@
 # Project Name
 
 > Capstone Project - Interbike 2022.
+> Website project for a bicycle exhibition, where great design and good development practices were used.
 
 ## Built With
 
