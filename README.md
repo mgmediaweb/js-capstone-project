@@ -3,7 +3,7 @@
 # Interbike 2022
 
 > ##### Website project for a bicycle exhibition, where great design and good development practices were used.
-> ##### In this project the SASS stylos processor was used, where the entire design of the website for mobile and desktop was configured. Using external JSON files to provide the dynamic information.
+> ##### In this project I use SASS style processor, where the entire design of the website for mobile and desktop was configured. Using external JSON files to provide the dynamic information.
 
 ## Built With
 
